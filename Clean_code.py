@@ -1,0 +1,30 @@
+import matplotlib.pyplot as plt
+import seaborn as sns
+import pandas as pd
+var = pd.read_csv("Angela/MRM_GluGli_Rep_3.csv")
+sns.set_style('white')
+# plt.figure(figsize=(10,7))
+# plt.legend(loc=1)
+# sns.set_context("paper", font_scale =5)
+# sns.pairplot(var, vars=["CAD", "WEE",], hue="S-poor and S-rich", height=6, aspect = 1, palette="tab10", plot_kws={'s': 600})
+# plt.show()
+# plt.savefig("CADvsWEE.png", format='png')
+# plt.savefig('CADvsWEE.svg', format='svg', dpi=1)
+# sns.pairplot(var, vars=["ARI", "CAD", "LAN", "STA", "CSP",	"JAG",	"MAC", "NOR",	"WEE"], hue ="S-poor and S-rich", height=6, aspect = 1, palette="tab10", plot_kws={'s': 600})
+# plt.savefig("cultivars.png", format='png')
+# plt.savefig('cultivars.svg', format='svg', dpi=1)
+# sns.pairplot(var, vars=["ARI", "CAD", "CSP", "JAG","LAN", "MAC", "NOR","STA", "WEE"], hue ="Specificity", height=5, aspect = 1, palette="tab20c_r", plot_kws={'s': 500})
+# plt.savefig("Specificity_10.png", format='png')
+# plt.savefig('Specificity_10.svg', format='svg', dpi=1)
+# sns.pairplot(var, vars=["ARI", "CAD", "CSP", "JAG","LAN", "MAC", "NOR","STA", "WEE"], hue ="S-poor and S-rich", height=6, aspect = 1, palette="tab10", plot_kws={'s': 600})
+# plt.savefig("cultivars.png", format='png')
+# plt.savefig('cultivars.svg', format='svg', dpi=1)
+
+#plt.figure(figsize=(8,5))
+plt.figure_size_inches(12,6)
+sns.set_context("paper", font_scale =5)
+sns.pairplot(var, vars=["ARI","CSP", "JAG"], hue="S-poor and S-rich", height=6, aspect = 1, palette="tab10", plot_kws={'s': 150})
+plt.show()
+# plt.savefig("ARI_CSP_JAG_01_rep.png", format='png')
+# plt.savefig("ARI_CSP_JAG_01_rep.svg", format='svg')
+
